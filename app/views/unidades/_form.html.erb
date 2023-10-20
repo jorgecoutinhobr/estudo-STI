@@ -1,0 +1,60 @@
+<%= form_with(model: unidade, local: true) do |form| %>
+  <% if unidade.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(unidade.errors.count, "error") %> prohibited this unidade from being saved:</h2>
+
+      <ul>
+        <% unidade.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+    <div class="col-12 col-sm-6">
+      <div class="mb-4">
+        <%= form.text_field :nome, class: "form-control", placeholder: 'Nome do Campus', style: "background-color: #f5f5f5;" %>
+        </div>
+    </div>
+    
+    <div class="col-12 col-sm-6">
+      <div class="mb-4">
+       <%= form.text_field :endereco, class: "form-control", placeholder: 'Endereço', style: "background-color: #f5f5f5;" %>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6">
+      <div class="mb-4">
+        <%= form.text_field :numero, class: "form-control", placeholder: 'Número', style: "background-color: #f5f5f5;" %>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6">
+      <div class="mb-4">
+        <%= form.text_field :bairro, class: "form-control", placeholder: 'Bairro', style: "background-color: #f5f5f5;" %>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6">
+      <div class="mb-4">
+        <%= form.text_field :cidade, class: "form-control", placeholder: 'Cidade', style: "background-color: #f5f5f5;" %>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6">
+      <div class="mb-4">
+        <%= form.text_field :cep, class: "form-control", placeholder: 'CEP', style: "background-color: #f5f5f5;" %>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-6">
+      <div class="mb-4">
+        <%= form.date_field :data_desativacao, class: "form-control", placeholder: 'Data de desativação dd/mm/yyyy', style: "background-color: #f5f5f5;" %>
+      </div>
+    </div>
+  </div>
+  <div class="actions">
+    <%= form.submit 'Salvar' ,class: 'btn btn-dark'%>
+  </div>
+<% end %>

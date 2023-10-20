@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+<div class="d-flex" style="justify-content: center">
+  <table class="table table-striped table-dark" style="width: 40% ">
+    <tbody>
+      <tr>
+        <th>Nome:</th>
+        <td><%= @unidade.nome %></td>
+      </tr>
+      <tr>
+        <th>Endereço:</th>
+        <td><%= @unidade.endereco %></td>
+      </tr>
+      <tr>
+        <th>Número:</th>
+        <td><%= @unidade.numero %></td>
+      </tr>
+      <tr>
+        <th>Bairro:</th>
+        <td><%= @unidade.bairro %></td>
+      </tr>
+      <tr>
+        <th>Cidade:</th>
+        <td><%= @unidade.cidade %></td>
+      </tr>
+      <tr>
+        <th>CEP:</th>
+        <td><%= @unidade.cep %></td>
+      </tr>
+      <tr>
+        <th>Data de Desativação:</th>
+        <td><%= @unidade.data_desativacao %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="d-flex-direction: column" style="margin-left: 30%">
+  <%= link_to 'Editar', edit_unidade_path(@unidade), class: 'btn btn-dark ' %>
+  <%= link_to 'Voltar', unidades_path, class: 'btn btn-dark' %>
+</div>  
+
+

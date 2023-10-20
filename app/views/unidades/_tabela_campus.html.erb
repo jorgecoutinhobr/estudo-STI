@@ -1,0 +1,69 @@
+<table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Endereco</th>
+        <th>Numero</th>
+        <th>Bairro</th>
+        <th>Cidade</th>
+        <th>Cep</th>
+        <th>Data desativacao</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <h3>Campus Ativo</h3>
+      <% @unidades.each do |unidade| %>
+        <% if unidade.data_desativacao == ''%>
+          <tr>
+            <td><%= unidade.nome %></td>
+            <td><%= unidade.endereco %></td>
+            <td><%= unidade.numero %></td>
+            <td><%= unidade.bairro %></td>
+            <td><%= unidade.cidade %></td>
+            <td><%= unidade.cep %></td>
+            <td><%= unidade.data_desativacao %></td>
+            <td><%= link_to 'Mostrar', unidade %></td>
+            <td><%= link_to 'Editar', edit_unidade_path(unidade) %></td>
+            <td><%= link_to 'Deletar', unidade, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+          </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
+
+  <table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Endereco</th>
+        <th>Numero</th>
+        <th>Bairro</th>
+        <th>Cidade</th>
+        <th>Cep</th>
+        <th>Data desativacao</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <h3>Campus Inativo</h3>
+      <% @unidades.each do |unidade| %>
+        <% if unidade.data_desativacao != ''%>
+          <tr>
+            <td><%= unidade.nome %></td>
+            <td><%= unidade.endereco %></td>
+            <td><%= unidade.numero %></td>
+            <td><%= unidade.bairro %></td>
+            <td><%= unidade.cidade %></td>
+            <td><%= unidade.cep %></td>
+            <td><%= unidade.data_desativacao %></td>
+            <td><%= link_to 'Mostrar', unidade %></td>
+            <td><%= link_to 'Editar', edit_unidade_path(unidade) %></td>
+            <td><%= link_to 'Deletar', unidade, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+          </tr>
+        <% end %>
+      <% end %>
+    </tbody>
+  </table>
