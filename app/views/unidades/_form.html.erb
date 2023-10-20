@@ -1,7 +1,7 @@
 <%= form_with(model: unidade, local: true) do |form| %>
   <% if unidade.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(unidade.errors.count, "error") %> prohibited this unidade from being saved:</h2>
+      <p><%= pluralize(unidade.errors.count, "error") %> Erro:</p>
 
       <ul>
         <% unidade.errors.full_messages.each do |message| %>
@@ -20,7 +20,7 @@
     
     <div class="col-12 col-sm-6">
       <div class="mb-4">
-       <%= form.text_field :endereco, class: "form-control", placeholder: 'Endereço', style: "background-color: #f5f5f5;" %>
+        <%= form.text_field :endereco, class: "form-control", placeholder: 'Endereço', style: "background-color: #f5f5f5;" %>
       </div>
     </div>
 
@@ -32,7 +32,7 @@
 
     <div class="col-12 col-sm-6">
       <div class="mb-4">
-        <%= form.text_field :bairro, class: "form-control", placeholder: 'Bairro', style: "background-color: #f5f5f5;" %>
+        <%= form.text_field :bairro, class: "form-control field_with_errors", placeholder: 'Bairro', style: "background-color: #f5f5f5;" %>
       </div>
     </div>
 

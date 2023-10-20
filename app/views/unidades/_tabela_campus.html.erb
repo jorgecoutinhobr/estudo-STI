@@ -13,7 +13,7 @@
     </thead>
 
     <tbody>
-      <h3>Campus Ativo</h3>
+      <h3>Ativos</h3>
       <% @unidades.each do |unidade| %>
         <% if unidade.data_desativacao == ''%>
           <tr>
@@ -48,7 +48,7 @@
     </thead>
 
     <tbody>
-      <h3>Campus Inativo</h3>
+      <h3>Inativos</h3>
       <% @unidades.each do |unidade| %>
         <% if unidade.data_desativacao != ''%>
           <tr>

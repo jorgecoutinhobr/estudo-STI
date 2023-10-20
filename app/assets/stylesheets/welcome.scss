@@ -5,3 +5,59 @@
     padding-left: 5px;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333; 
+    color: #fff; 
+    text-align: left; 
+    padding: 20px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    max-width: 200px; 
+    height: auto;
+    margin-right: 20px; 
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+header p {
+    font-size: 18px;
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+#apresentacao {
+    text-align: left; 
+}
+
+#apresentacao h2 {
+    font-size: 24px;
+}
+
+#apresentacao p {
+    font-size: 16px;
+}
+
+footer {
+    background-color: #333; 
+    color: #fff; 
+    text-align: left; 
+    padding: 10px;
+}
