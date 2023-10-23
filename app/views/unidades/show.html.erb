@@ -24,11 +24,11 @@
       </tr>
       <tr>
         <th>CEP:</th>
-        <td><%= @unidade.cep %></td>
+        <td><%= cep_formatado(@unidade.cep) %></td>
       </tr>
       <tr>
         <th>Data de Desativação:</th>
-        <td><%= @unidade.data_desativacao %></td>
+        <td><%= data_formatada(@unidade.data_desativacao) %></td>
       </tr>
     </tbody>
   </table>
