@@ -1,0 +1,52 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Caronas</h1>
+
+<table class="table table-bordered table-striped table-dark">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Partida</th>
+      <th>Destino</th>
+      <th>Dia</th>
+      <th>Hora</th>
+      <th>Passageiros</th>
+      <th>Valor</th>
+      <th>Observacao</th>
+      <th>Paradas</th>
+      <th>Opções</th>
+    
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @caronas.each do |carona| %>
+      <tr>
+        <td><%= carona.nome %></td>
+        <td><%= carona.partida %></td>
+        <td><%= carona.destino %></td>
+        <td><%= diaf(carona.dia) %></td>
+        <td><%= horaf(carona.hora) %></td>
+        <td><%= carona.passageiros %></td>
+        <td><%= carona.valor %></td>
+        <td><%= carona.observacao %></td>
+        <td>
+          <% if carona.paradas.present? %>
+            Sim
+          <% else %>
+             Não
+           <% end %>
+        </td>
+        <td>
+          <%= link_to 'Mostrar', carona %>
+          <%= link_to 'Editar', edit_carona_path(carona) %>
+          <%= link_to 'Deletar', carona, method: :delete, data: { confirm: 'Tem certeza?' } %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nova Carona', new_carona_path, class: 'btn btn-dark' %>

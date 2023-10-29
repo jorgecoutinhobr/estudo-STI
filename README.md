@@ -40,5 +40,5 @@ Se você tiver alguma pergunta ou sugestão, sinta-se à vontade para entrar em 
 - Discord: jorgecoutinhobr
 - LinkedIn: [jorgecoutinhobr](https://www.linkedin.com/in/jorgecoutinhobr/)
 
-🚀
+
 

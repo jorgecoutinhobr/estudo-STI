@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Endereco:</strong>
+  <%= @parada.endereco %>
+</p>
+
+<p>
+  <strong>Carona:</strong>
+  <%= @parada.carona_id %>
+</p>
+
+<%= link_to 'Edit', edit_parada_path(@parada) %> |
+<%= link_to 'Back', paradas_path %>

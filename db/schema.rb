@@ -10,7 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_10_20_001116) do
+ActiveRecord::Schema.define(version: 2023_10_28_210136) do
+
+  create_table "caronas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "nome"
+    t.string "partida"
+    t.string "destino"
+    t.date "dia"
+    t.time "hora"
+    t.integer "passageiros"
+    t.float "valor"
+    t.text "observacao"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "paradas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "endereco"
+    t.bigint "carona_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["carona_id"], name: "index_paradas_on_carona_id"
+  end
 
   create_table "unidades", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "nome"
@@ -24,4 +45,5 @@ ActiveRecord::Schema.define(version: 2023_10_20_001116) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "paradas", "caronas"
 end
