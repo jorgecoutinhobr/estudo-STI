@@ -1,0 +1,56 @@
+<%= simple_form_for(@carona, html: { class: 'form' }) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs row">
+
+
+    <div class="col-md-6">
+      <%= f.input :nome, input_html: { class: 'form-control', style: 'background-color: #f5f5f5;' }, placeholder: 'Nome', label: false %>
+    </div>
+
+
+    <div class="col-md-6">
+      <%= f.input :partida, 
+      collection: @unidades, 
+      label_method: :nome, 
+      value_method: :nome, 
+      include_blank: 'Selecione a partida', 
+      input_html: { class: 'form-control', style: 'background-color: #f5f5f5;' }, 
+      label: false %>
+    </div>
+    <div class="col-md-6">
+      <%= f.input :destino, input_html: { class: 'form-control', style: 'background-color: #f5f5f5;' }, placeholder: 'Destino', label: false %>
+    </div> 
+
+ <div class="col-12">
+    <div id="paradas">
+      <%= f.simple_fields_for :paradas do |parada| %>
+        <%= render 'parada_fields', f: parada %>
+      <% end %>
+      <div class="links">
+        <%= link_to_add_association 'Adicionar parada', f, :paradas, class: 'btn btn-sm btn-dark', style: 'margin: 1% 0;' %>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <%= f.date_field :dia, as: :string, class: 'form-control', style: 'background-color: #f5f5f5;', placeholder: 'Data', label: false %>
+  </div>
+  <div class="col-md-6">
+    <%= f.input :hora, class: 'form-control', style: 'background-color: #f5f5f5;', placeholder: 'Hora', label: false %>
+  </div>
+  <div class="col-md-6" style='margin-top: 1%'>
+    <%= f.input :passageiros, input_html: { class: 'form-control', style: 'background-color: #f5f5f5;' }, placeholder: 'Passageiros', label: false %>
+  </div>
+  <div class="col-md-6" style='margin-top: 1%'>
+    <%= f.input :valor, input_html: { class: 'form-control', style: 'background-color: #f5f5f5;' }, placeholder: 'Valor', label: false %>
+  </div>
+  <div class="col-md-6">
+    <%= f.input :observacao, input_html: { class: 'form-control', style: 'background-color: #f5f5f5; resize: none;' }, placeholder: 'Observação', label: false %>
+  </div>
+</div> 
+
+<div class="form-actions">
+  <%= f.button :submit, class: 'btn btn-dark' %>
+</div>
+<% end %>

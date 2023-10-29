@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  partida: MyString
+  destino: MyString
+  dia: 2023-10-28
+  hora: 2023-10-28 18:00:01
+  passageiros: 1
+  valor: 1.5
+  observacao: MyText
+
+two:
+  nome: MyString
+  partida: MyString
+  destino: MyString
+  dia: 2023-10-28
+  hora: 2023-10-28 18:00:01
+  passageiros: 1
+  valor: 1.5
+  observacao: MyText
