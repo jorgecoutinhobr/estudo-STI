@@ -232,6 +232,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   cocoon
   foreman!
+  i18n
   jbuilder (~> 2.7)
   listen (~> 3.2)
   mysql2 (>= 0.4.4)
