@@ -26,7 +26,6 @@ Neste repositório, você encontrará:
 - Visualizações e Layouts
 - CRUD (Create, Read, Update, Delete)
 - Relacionamentos em Bancos de Dados
-- Autenticação e Autorização
 - Testes e TDD (Test-Driven Development)
 
 ## Agradecimentos
