@@ -3,54 +3,61 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs row">
-
-
     <div class="col-md-6">
-      <%= f.input :nome, input_html: { class: 'form-control', style: 'background-color: #f5f5f5;' }, placeholder: 'Nome', label: false %>
+      <%= f.input :nome, input_html: { class: 'form-control', style: 'background-color: #f5f5f5;' }, placeholder: "#{Carona.human_attribute_name(:nome)}", label: false %>
     </div>
 
-
     <div class="col-md-6">
-      <%= f.input :partida, 
-      collection: @unidades, 
-      label_method: :nome, 
-      value_method: :nome, 
-      include_blank: 'Selecione a partida', 
-      input_html: { class: 'form-control', style: 'background-color: #f5f5f5;' }, 
-      label: false %>
+      <select id="unidade_tipo" class="form-control">
+      <option value="" disabled selected><%= t('select.op')%></option>
+        <option value="partida"><%= t('select.initial')%></option>
+        <option value="destino"><%= t('select.end')%></option>
+      </select>
     </div>
-    <div class="col-md-6">
-      <%= f.input :destino, input_html: { class: 'form-control', style: 'background-color: #f5f5f5;' }, placeholder: 'Destino', label: false %>
-    </div> 
 
- <div class="col-12">
-    <div id="paradas">
-      <%= f.simple_fields_for :paradas do |parada| %>
-        <%= render 'parada_fields', f: parada %>
-      <% end %>
-      <div class="links">
-        <%= link_to_add_association 'Adicionar parada', f, :paradas, class: 'btn btn-sm btn-dark', style: 'margin: 1% 0;' %>
+  <div class="col-md-6">
+    <%= f.input :partida, collection: @unidades, label_method: :nome, value_method: :nome, include_blank: t('select.initial'), input_html: { class: 'form-control', style: 'background-color: #f5f5f5;', id: 'partida_select', hidden: true }, label: false %>
+    <%= f.input :partida, input_html: { class: 'form-control', style: 'background-color: #f5f5f5;', id: 'partida_input', disabled: true, hidden: true, placeholder: Carona.human_attribute_name(:partida) }, label: false %>
+  </div>
+
+  <div class="col-md-6">
+    <%= f.input :destino, input_html: { class: 'form-control', style: 'background-color: #f5f5f5;', id: 'destino_input', disabled: true, hidden: true, placeholder: t('select.end') }, label: false %>
+    <%= f.input :destino, collection: @unidades, label_method: :nome, value_method: :nome, input_html: { class: 'form-control', style: 'background-color: #f5f5f5;', id: 'destino_select', hidden: true }, include_blank: t('select.end'), label: false %>
+  </div>
+
+    <div class="col-12">
+      <div id="paradas">
+        <%= f.simple_fields_for :paradas do |parada| %>
+          <%= render 'parada_fields', f: parada %>
+        <% end %>
+        <div class="links">
+          <%= link_to_add_association t('links.stoppoint'), f, :paradas, class: 'btn btn-sm btn-dark', style: 'margin: 1% 0;' %>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="col-md-6">
-    <%= f.date_field :dia, as: :string, class: 'form-control', style: 'background-color: #f5f5f5;', placeholder: 'Data', label: false %>
-  </div>
-  <div class="col-md-6">
-    <%= f.input :hora, class: 'form-control', style: 'background-color: #f5f5f5;', placeholder: 'Hora', label: false %>
-  </div>
-  <div class="col-md-6" style='margin-top: 1%'>
-    <%= f.input :passageiros, input_html: { class: 'form-control', style: 'background-color: #f5f5f5;' }, placeholder: 'Passageiros', label: false %>
-  </div>
-  <div class="col-md-6" style='margin-top: 1%'>
-    <%= f.input :valor, input_html: { class: 'form-control', style: 'background-color: #f5f5f5;' }, placeholder: 'Valor', label: false %>
-  </div>
-  <div class="col-md-6">
-    <%= f.input :observacao, input_html: { class: 'form-control', style: 'background-color: #f5f5f5; resize: none;' }, placeholder: 'Observação', label: false %>
-  </div>
-</div> 
 
-<div class="form-actions">
-  <%= f.button :submit, class: 'btn btn-dark' %>
-</div>
+    <div class="col-md-6">
+      <%= f.date_field :dia, as: :string, class: 'form-control', style: 'background-color: #f5f5f5;', placeholder: "#{Carona.human_attribute_name(:dia)}", label: false %>
+    </div> 
+
+    <div class="col-md-6">
+      <%= f.input :hora, class: 'form-control', style: 'background-color: #f5f5f5;', placeholder: "#{Carona.human_attribute_name(:hora)}", label: false %>
+    </div>
+
+    <div class="col-md-6" style='margin-top: 1%'>
+      <%= f.input :passageiros, input_html: { class: 'form-control', style: 'background-color: #f5f5f5;' }, placeholder: "#{Carona.human_attribute_name(:passageiros)}", label: false %>
+    </div>
+
+    <div class="col-md-6" style='margin-top: 1%'>
+      <%= f.input :valor, placeholder: "#{Carona.human_attribute_name(:valor)}", label: false, input_html: { class: 'form-control', style: 'background-color: #f5f5f5;' }%>
+    </div>
+
+    <div class="col-md-6">
+      <%= f.input :observacao, input_html: { class: 'form-control', style: 'background-color: #f5f5f5; resize: none;' }, placeholder: "#{Carona.human_attribute_name(:observacao)}", label: false %>
+    </div>
+  </div> 
+
+  <div class="form-actions">
+    <%= f.button :submit, t('links.save'),class: 'btn btn-dark'%>
+  </div>
 <% end %>

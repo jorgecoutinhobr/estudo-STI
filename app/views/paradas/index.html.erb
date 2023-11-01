@@ -16,9 +16,9 @@
       <tr>
         <td><%= parada.endereco %></td>
         <td><%= parada.carona_id %></td>
-        <td><%= link_to 'Show', parada %></td>
-        <td><%= link_to 'Edit', edit_parada_path(parada) %></td>
-        <td><%= link_to 'Destroy', parada, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t('links.show'), parada %></td>
+        <td><%= link_to t('links.edit'), edit_parada_path(parada) %></td>
+        <td><%= link_to t('links.delete'), parada, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Parada', new_parada_path %>
+<%= link_to t('links.newstop'), new_parada_path %>

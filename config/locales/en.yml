@@ -30,4 +30,63 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  activerecord:
+    models:
+      unidade:   
+        one: Unit
+        other: Units
+      parada:
+        one: Stop
+        other: Stops
+      carona:
+        one: Ride
+        other: Rides
+    attributes:
+      unidade:
+        id: ID-Unit
+        nome: Name
+        endereco: Adress
+        numero: Number
+        bairro: Neighborhood
+        cidade: City
+        cep: Zipcode
+        data_desativacao: Desativation Date
+      parada:
+        id: ID-Stop
+        endereco: Address
+        carona_id: ID-Ride
+      carona: 
+        id: ID-Ride
+        nome: 'Name'
+        partida: Start to
+        destino: Where to
+        dia: Day
+        hora: Hour
+        passageiros: Passengers
+        valor: Cost
+        observacao: Observations
   hello: "Hello world"
+  links:
+    edit: "Edit"
+    delete: "Delete"
+    show: "Show"
+    newride: 'New Ride'
+    newstop: 'New Stop'
+    newunit: 'New Unit'
+    back: 'Back'
+    save: 'Save'
+    stoppoint: 'Add Stop'
+    rmstoppoint: 'Remove Stop'
+  table:
+    stops: 'Stops'
+    options: 'Options'
+  welcome:
+    title: 'Welcome to Universidade Federal Fluminense'
+    subtitle: 'Here you can register the units of uff and register rides'
+    button: "Let's go"
+  available: 'Availables'
+  unavailable: 'Unavailables'
+  select:
+    initial: 'Start to'
+    end: 'Where to'
+    op: 'Select'

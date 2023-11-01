@@ -2,5 +2,5 @@
 
 <%= render 'form', unidade: @unidade %>
 
-<%= link_to 'Mostrar', @unidade, class: 'btn btn-dark', style: "margin-top: 1%"%> 
-<%= link_to 'Voltar', unidades_path, class: 'btn btn-dark', style: "margin-top: 1%"%>
+<%= link_to t('links.show'), @unidade, class: 'btn btn-dark', style: "margin-top: 1%"%> 
+<%= link_to t('links.back'), unidades_path, class: 'btn btn-dark', style: "margin-top: 1%"%>

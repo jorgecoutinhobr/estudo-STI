@@ -1,23 +1,3 @@
-<body>
-	<header>
-    <div class="header-content">
-    	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUvasjyuuFMKjtXsOWoamOtk1BU3gp7hCOp69_ok_ZMZ5k27FrC7KtB9OUeeCoPagZkJ4&usqp=CAU" alt="Universidade XYZ">
-        <div class="header-text">
-          <h1>Universidade Federal Fluminense</h1>
-        </div>
-    </div>
-  </header>
-    
-  <main>
-    <section id="apresentacao">
-      <h2>Bem-vindo à UFF</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus lacus, ullamcorper sit amet arcu sit amet, placerat mattis nisi. Aliquam erat volutpat. Morbi fringilla vulputate eros eu molestie. Vestibulum ut venenatis libero. Sed in volutpat neque, sit amet interdum dolor. Etiam vel pharetra ipsum. Donec tristique sem vitae justo rhoncus tincidunt. Quisque pharetra mi ac lectus lacinia, a auctor neque finibus. Praesent consequat justo vel tortor semper elementum. Nulla eros urna, egestas quis pharetra nec, rhoncus id dolor. Aliquam ut blandit risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam eget gravida orci, id aliquam ante. Sed quis bibendum ipsum. Nulla lobortis ornare metus vitae gravida. </p>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2023 Universidade Federal Fluminense</p>
-  </footer>
-</body>
-
-
+<% content_for :welcome do %>
+  <%= render './partials/header_welcome' %>
+<% end %>

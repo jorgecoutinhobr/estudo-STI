@@ -1,0 +1,59 @@
+"pt-BR":
+  activerecord:
+    models:
+      unidade:
+        one: Unidade
+        other: Unidades
+      parada:
+        one: Parada
+        other: Paradas
+      carona:
+        one: Corrida
+        other: Corridas
+    attributes:
+      unidade:
+        id: ID-Unidade
+        nome: Nome
+        endereco: Endereço
+        numero: Numero
+        bairro: Bairro
+        cidade: Cidade
+        cep: CEP
+        data_desativacao: Data de Desativação
+      parada:
+        id: ID-Parada
+        endereco: Endereço
+        carona_id: ID-Corona
+      carona:          
+        partida: Partida
+        destino: Destino
+        dia: Dia
+        hora: Hora
+        passageiros: Passageiros
+        valor: Valor
+        obervacao: Observações
+  hello: "Olá, Mundo!"
+  links:
+    edit: "Editar"
+    delete: "Deletar"
+    show: "Mostrar"
+    newride: 'Nova Corrida'
+    newstop: 'Nova Parada'
+    newunit: 'Nova Unidade'
+    back: 'Voltar'
+    save: 'Salvar'
+    stoppoint: 'Adicionar Parada'
+    rmstoppoint: 'Remover Parada'
+  table:
+    stops: 'Paradas'
+    options: 'Opções'
+  welcome:
+    title: 'Bem-vindo a Universidade Federal Fluminense'
+    subtitle: 'Aqui você pode cadastrar os campos da uff e cadastrar caronas'
+    button: 'Vamos lá'
+  available: 'Ativos'
+  unavailable: 'inativos'
+  select:
+    initial: 'Selecione a partida'
+    end: 'Selecione o destino'
+    op: 'Selecionar'

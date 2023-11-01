@@ -1,19 +1,19 @@
 <table class="table table-bordered table-striped table-dark">
     <thead>
       <tr>
-        <th>Nome</th>
-        <th>Endereço</th>
-        <th>Número</th>
-        <th>Bairro</th>
-        <th>Cidade</th>
-        <th>Cep</th>
-        <th>Data desativação</th>
-        <th colspan="3">Opções</th>
+        <th><%=@unidades.human_attribute_name(:nome)%></th>
+        <th><%=@unidades.human_attribute_name(:endereco)%></th>
+        <th><%=@unidades.human_attribute_name(:numero)%></th>
+        <th><%=@unidades.human_attribute_name(:bairro)%></th>
+        <th><%=@unidades.human_attribute_name(:cidade)%></th>
+        <th><%=@unidades.human_attribute_name(:cep)%></th>
+        <th><%=@unidades.human_attribute_name(:data_desativacao)%></th>
+        <th colspan="3"><%=t('table.options')%></th>
       </tr>
     </thead>
 
     <tbody>
-      <h3>Ativos</h3>
+      <h3><%= t('available') %></h3>
       <% @unidades.each do |unidade| %>
         <% if unidade.data_desativacao == ''%>
           <tr>
@@ -24,46 +24,46 @@
             <td><%= unidade.cidade %></td>
             <td><%= cep_formatado(unidade.cep) %></td>
             <td><%= unidade.data_desativacao %></td>
-            <td><%= link_to 'Mostrar', unidade %></td>
-            <td><%= link_to 'Editar', edit_unidade_path(unidade) %></td>
-            <td><%= link_to 'Deletar', unidade, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+            <td><%= link_to t('links.show'), unidade %></td>
+            <td><%= link_to t('links.edit'), edit_unidade_path(unidade) %></td>
+            <td><%= link_to t('links.delete'), unidade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <% end %>
       <% end %>
     </tbody>
-  </table>
+</table>
 
-  <table class="table table-bordered table-striped table-dark">
-    <thead>
-      <tr>
-        <th>Nome</th>
-        <th>Endereço</th>
-        <th>Número</th>
-        <th>Bairro</th>
-        <th>Cidade</th>
-        <th>Cep</th>
-        <th>Data desativação</th>
-        <th colspan="3">Opções</th>
-      </tr>
-    </thead>
+<table class="table table-bordered table-striped table-dark">
+  <thead>
+    <tr>
+      <th><%=@unidades.human_attribute_name(:nome)%></th>
+      <th><%=@unidades.human_attribute_name(:endereco)%></th>
+      <th><%=@unidades.human_attribute_name(:numero)%></th>
+      <th><%=@unidades.human_attribute_name(:bairro)%></th>
+      <th><%=@unidades.human_attribute_name(:cidade)%></th>
+      <th><%=@unidades.human_attribute_name(:cep)%></th>
+      <th><%=@unidades.human_attribute_name(:data_desativacao)%></th>
+      <th colspan="3"><%=t('table.options')%></th>
+    </tr>
+  </thead>
 
-    <tbody>
-      <h3>Inativos</h3>
-      <% @unidades.each do |unidade| %>
-        <% if unidade.data_desativacao != ''%>
-          <tr>
-            <td><%= unidade.nome %></td>
-            <td><%= unidade.endereco %></td>
-            <td><%= unidade.numero %></td>
-            <td><%= unidade.bairro %></td>
-            <td><%= unidade.cidade %></td>
-            <td><%= cep_formatado(unidade.cep) %></td>
-            <td><%= data_formatada(unidade.data_desativacao) %></td>
-            <td><%= link_to 'Mostrar', unidade %></td>
-            <td><%= link_to 'Editar', edit_unidade_path(unidade) %></td>
-            <td><%= link_to 'Deletar', unidade, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
-          </tr>
-        <% end %>
+  <tbody>
+    <h3><%= t('unavailable') %></h3>
+    <% @unidades.each do |unidade| %>
+      <% if unidade.data_desativacao != ''%>
+        <tr>
+          <td><%= unidade.nome %></td>
+          <td><%= unidade.endereco %></td>
+          <td><%= unidade.numero %></td>
+          <td><%= unidade.bairro %></td>
+          <td><%= unidade.cidade %></td>
+          <td><%= cep_formatado(unidade.cep) %></td>
+          <td><%= data_formatada(unidade.data_desativacao) %></td>
+          <td><%= link_to t('links.show'), unidade %></td>
+          <td><%= link_to t('links.edit'), edit_unidade_path(unidade) %></td>
+          <td><%= link_to t('links.delete'), unidade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
       <% end %>
-    </tbody>
-  </table>
+    <% end %>
+  </tbody>
+</table>

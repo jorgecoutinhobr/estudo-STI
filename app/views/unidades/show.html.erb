@@ -3,39 +3,39 @@
   <table class="table table-striped table-dark" style="width: 40% ">
     <tbody>
       <tr>
-        <th>Nome:</th>
+        <th><%= Unidade.human_attribute_name(:nome) %></th>
         <td><%= @unidade.nome %></td>
       </tr>
       <tr>
-        <th>Endereço:</th>
+        <th><%= Unidade.human_attribute_name(:endereco) %></th>
         <td><%= @unidade.endereco %></td>
       </tr>
       <tr>
-        <th>Número:</th>
-        <td><%= @unidade.numero %></td>
+        <th><%= Unidade.human_attribute_name(:numero) %></th>
+        <td><%= @unidade.numero%></td>
       </tr>
       <tr>
-        <th>Bairro:</th>
+        <th><%= Unidade.human_attribute_name(:bairro) %></th>
         <td><%= @unidade.bairro %></td>
       </tr>
       <tr>
-        <th>Cidade:</th>
+        <th><%= Unidade.human_attribute_name(:cidade) %></th>
         <td><%= @unidade.cidade %></td>
       </tr>
       <tr>
-        <th>CEP:</th>
-        <td><%= cep_formatado(@unidade.cep) %></td>
+        <th><%= Unidade.human_attribute_name(:cep) %></th>
+        <td><%= @unidade.cep %></td>
       </tr>
       <tr>
-        <th>Data de Desativação:</th>
-        <td><%= data_formatada(@unidade.data_desativacao) %></td>
+        <th><%= Unidade.human_attribute_name(:data_desativacao) %></th>
+        <td><%= @unidade.data_desativacao %></td>
       </tr>
     </tbody>
   </table>
 </div>
 <div class="d-flex-direction: column" style="margin-left: 30%">
-  <%= link_to 'Editar', edit_unidade_path(@unidade), class: 'btn btn-dark ' %>
-  <%= link_to 'Voltar', unidades_path, class: 'btn btn-dark' %>
+  <%= link_to t('links.edit'), edit_unidade_path(@unidade), class: 'btn btn-dark ' %>
+  <%= link_to t('links.back'), unidades_path, class: 'btn btn-dark' %>
 </div>  
 
 
