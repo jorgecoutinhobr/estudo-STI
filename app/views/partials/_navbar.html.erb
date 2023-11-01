@@ -11,8 +11,18 @@
             Idioma
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><%= link_to "Português", "#{request.path}?locale=pt-BR", class: 'dropdown-item' %></li>
-            <li><%= link_to "English", "#{request.path}?locale=en", class: 'dropdown-item' %></li>
+            <li>
+              <div class="image-link-container">
+                <img src="https://www.curitiba.pr.leg.br/atividade-parlamentar/legislacao/imagens/bandeira-do-brasil.png" width="25" height="20">
+                <%= link_to "Português", "#{request.path}?locale=pt-BR", class: 'dropdown-item' %>
+              </div>
+            </li>
+            <li>
+              <div class= "image-link-container">
+                <img src="https://www.gov.br/agricultura/pt-br/assuntos/relacoes-internacionais/agro-mais-investimentos/imagens/bandeira-dos-estados-unidos.png/@@images/image.png" width="25" height="20">
+                <%= link_to "English", "#{request.path}?locale=en", class: 'dropdown-item' %>
+              </div>
+            </li>
           </ul>
         </li>
     </div>

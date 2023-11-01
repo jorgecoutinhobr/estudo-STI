@@ -17,5 +17,12 @@
 .corpo{
     margin-top: 4%;
 }
-
+.image-link-container {
+    display: flex; 
+    align-items: center; 
+  }
+  
+  .image-link-container img {
+    margin-left: 10px; 
+  }
   
