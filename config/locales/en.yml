@@ -81,7 +81,7 @@ en:
     stops: 'Stops'
     options: 'Options'
   welcome:
-    title: 'Welcome to Universidade Federal Fluminense'
+    title: 'Welcome to Federal Fluminense University'
     subtitle: 'Here you can register the units of uff and register rides'
     button: "Let's go"
   available: 'Availables'
