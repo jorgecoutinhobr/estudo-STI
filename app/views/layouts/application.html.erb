@@ -4,15 +4,16 @@
     <title>Teste</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= javascript_pack_tag 'unidade_escolha' %>
+    <%= javascript_pack_tag 'unidade_escolha', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     
   </head>
 
-  <body class="">
+  <body>
     <%= render './partials/navbar'%>
-    <div class="container">
+    <%= yield :welcome %>
+    <div class="container corpo">
       <%= yield %>
     </div>
   </body>
