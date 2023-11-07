@@ -44,6 +44,7 @@
     save: 'Salvar'
     stoppoint: 'Adicionar Parada'
     rmstoppoint: 'Remover Parada'
+    order: 'Ordem'
   table:
     stops: 'Paradas'
     options: 'Opções'

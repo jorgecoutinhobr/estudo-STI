@@ -4,6 +4,8 @@ class CaronasController < ApplicationController
   def index
     @caronas = Carona.all
     @paradas = Parada.all
+    ordenado_por = params[:order] == 'asc' ? 'asc' : 'desc'
+    @caronas = @caronas.order("dia #{ordenado_por}")
   end
 
   def show

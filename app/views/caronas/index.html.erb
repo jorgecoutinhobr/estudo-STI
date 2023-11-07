@@ -1,11 +1,27 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1><%= t('activerecord.models.carona.other')%></h1>
-
+<div class="d-flex justify-content-between align-items-center">
+  <h1><%= t('activerecord.models.carona.other') %></h1>
+  <div class="btn btn-sm btn-dark">
+    <div class="dropdown">
+      <a class="dropdown-toggle" href="#" id="Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style='text-decoration: none;color: #fff'>
+        <%= t('links.order') %>
+      </a>
+      <div class="dropdown-menu" aria-labelledby="Dropdown">
+        <div>
+          <%= link_to "Data Ascendente", caronas_path(order: 'asc'), class: "dropdown-item" %>
+        </div>
+        <div>
+          <%= link_to "Data Descendente", caronas_path(order: 'desc'), class: "dropdown-item" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <table class="table table-bordered table-striped table-dark">
-  <thead>
+   <thead>
     <tr>
       <th><%= @caronas.human_attribute_name(:nome)%></th>
       <th><%= @caronas.human_attribute_name(:partida)%></th>

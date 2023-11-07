@@ -77,6 +77,7 @@ en:
     save: 'Save'
     stoppoint: 'Add Stop'
     rmstoppoint: 'Remove Stop'
+    order: 'Order'
   table:
     stops: 'Stops'
     options: 'Options'
