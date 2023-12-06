@@ -1,4 +1,4 @@
-<table class="table table-bordered table-striped table-dark">
+<table class="table table-bordered table-striped table-dark ativo">
     <thead>
       <tr>
         <th><%=@unidades.human_attribute_name(:nome)%></th>
@@ -26,7 +26,7 @@
             <td><%= unidade.data_desativacao %></td>
             <td><%= link_to t('links.show'), unidade %></td>
             <td><%= link_to t('links.edit'), edit_unidade_path(unidade) %></td>
-            <td><%= link_to t('links.delete'), unidade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Delete', unidade, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <% end %>
       <% end %>
@@ -58,7 +58,7 @@
           <td><%= unidade.bairro %></td>
           <td><%= unidade.cidade %></td>
           <td><%= cep_formatado(unidade.cep) %></td>
-          <td><%= data_formatada(unidade.data_desativacao) %></td>
+          <td><%= unidade.data_desativacao %></td>
           <td><%= link_to t('links.show'), unidade %></td>
           <td><%= link_to t('links.edit'), edit_unidade_path(unidade) %></td>
           <td><%= link_to t('links.delete'), unidade, method: :delete, data: { confirm: 'Are you sure?' } %></td>

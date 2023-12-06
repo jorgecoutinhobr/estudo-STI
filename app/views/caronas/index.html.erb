@@ -1,11 +1,10 @@
-
 <p id="notice"><%= notice %></p>
 
 <div class="d-flex justify-content-between align-items-center">
   <h1><%= t('activerecord.models.carona.other') %></h1>
-  <div class="btn btn-sm btn-dark">
+  <div>
     <div class="dropdown">
-      <a class="dropdown-toggle" href="#" id="Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style='text-decoration: none;color: #fff'>
+      <a class="dropdown-toggle" href="#" id="Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style='text-decoration: none;color: #000'>
         <%= t('links.order') %>
       </a>
       <div class="dropdown-menu" aria-labelledby="Dropdown">
@@ -56,7 +55,7 @@
         </td>
         <td><%= link_to t('links.show'), carona %></td>
         <td><%= link_to t('links.edit'), edit_carona_path(carona)%></td>
-        <td><%= link_to t('links.delete'), carona, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', carona, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

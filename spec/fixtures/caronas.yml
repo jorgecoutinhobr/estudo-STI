@@ -1,0 +1,19 @@
+carona_1:
+  nome: 'João'
+  partida: 'Praia Vermelha'
+  destino: 'Praia do Flamengo'
+  dia: '2016-12-12'
+  hora: '12:00'
+  passageiros: 2
+  observacao: 'Levar guarda-sol'
+  valor: 10.00
+
+carona_2:
+  nome: 'Maria'
+  partida: 'Maricá'
+  destino: 'Gragoáta'
+  dia: '2016-12-12'
+  hora: '12:00'
+  passageiros: 2
+  observacao: 'Levar guarda-sol'
+  valor: 10.00

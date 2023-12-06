@@ -26,14 +26,20 @@ gem 'i18n'
 # gem 'image_processing', '~> 1.2'
 gem "cocoon"
 gem 'simple_form'
-gem 'foreman', github: 'ddollar/foreman'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'rspec-rails'
+  gem 'faker'
+  gem 'httparty'
+
+  gem 'pry'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
+gem 'factory_bot_rails'
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
@@ -42,12 +48,14 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring-commands-rspec'
 end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
+  gem 'shoulda-matchers', '~> 5.0'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
 end
