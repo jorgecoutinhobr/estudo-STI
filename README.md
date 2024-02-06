@@ -6,16 +6,6 @@ Bem-vindo ao meu repositório de estudo dedicado ao aprendizado de Ruby on Rails
 
 O objetivo deste repositório é documentar meu progresso e compartilhar conhecimento enquanto aprendo Ruby on Rails. Este é um projeto pessoal que faz parte do meu estágio, mas também serve como um recurso útil para quem está interessado em aprender Ruby on Rails.
 
-## Recursos
-
-Neste repositório, você encontrará:
-
-- **Códigos de Exemplo**: Exemplos de código relacionados a conceitos e práticas do Ruby on Rails.
-
-- **Notas de Aula**: Minhas anotações pessoais de aulas e tutoriais relevantes.
-
-- **Projetos de Exemplo**: Projetos de exemplo que desenvolvi para praticar minhas habilidades em Ruby on Rails.
-
 ## Tópicos Abordados
 
 - Introdução ao Ruby on Rails
